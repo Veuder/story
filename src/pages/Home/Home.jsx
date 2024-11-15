@@ -3,7 +3,7 @@ import Header from '../../components/Header/Header'
 import styles from './Home.module.scss'
 import videoRight from '../../assets/video/Page-0.webm'
 
-const Home = ({ difficulty, setDifficulty }) => {
+const Home = ({ setDifficulty }) => {
   const [openHomeModal, setOpenHomeModal] = useState(false)
   const [srcVideo, setSrcVideo] = useState(videoRight)
 

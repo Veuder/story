@@ -4,8 +4,6 @@ import './Difficulty.scss'
 import close from '../../assets/images/difficulty/close-modal.png'
 import mobileMenuImg1 from '../../assets/images/difficulty/mobile-menu-img-1.png'
 import mobileMenuImg2 from '../../assets/images/difficulty/mobile-menu-img-2.png'
-
-import { ReactComponent as Question } from '../../assets/images/difficulty/question.svg'
 import { ReactComponent as Menu } from '../../assets/images/difficulty/menu.svg'
 import { ReactComponent as MenuClose } from '../../assets/images/difficulty/menu-close.svg'
 import { ReactComponent as MobileRead } from '../../assets/images/difficulty/mobile-read.svg'

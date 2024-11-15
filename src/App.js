@@ -96,7 +96,7 @@ function App() {
         window.clearInterval(i)
       }
     }
-  }, [difficulty])
+  }, [difficulty, isMobile])
 
   return (
     <>
