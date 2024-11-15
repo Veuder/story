@@ -1,0 +1,206 @@
+@import '../../assets/styles/vars.scss';
+
+.text {
+  @include mobile {
+    top: 85px;
+  }
+  br {
+    @include mobile {
+      display: none;
+    }
+    &.mb {
+      display: none;
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+.wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @include tablet-portrait {
+    flex-direction: column;
+  }
+}
+
+.first {
+  font-family: $bonanova;
+  font-size: 68.57px;
+  line-height: 72px;
+  color: $orange;
+  position: relative;
+  top: 2px;
+  @include tablet {
+    font-size: 40px;
+    line-height: 42px;
+    top: 1px;
+  }
+  @include mobile {
+    font-size: 36px;
+    line-height: 37.8px;
+  }
+}
+
+.videoBlock {
+  position: relative;
+  width: 100%;
+  @include tablet-portrait {
+    display: flex;
+    justify-content: center;
+  }
+  video {
+    width: 980px;
+    position: absolute;
+    right: 0;
+    top: 11px;
+    @include tablet {
+      width: 632px;
+    }
+    @include tablet-portrait {
+      position: relative;
+      width: 425px;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.img {
+  position: absolute;
+
+  &__left_1 {
+    top: -115px;
+    right: calc(100% + 100px);
+    animation: moveAround1 4s infinite alternate ease-in-out;
+    @include tablet {
+      width: 313px;
+      top: -107px;
+      right: calc(100% + 31px);
+    }
+    @include tablet-portrait {
+      width: 258px;
+      left: -145px;
+      right: unset;
+      bottom: -280px;
+      top: unset;
+    }
+    @include mobile {
+      width: 146px;
+      bottom: -205px;
+      left: -25px;
+    }
+  }
+  &__left_2 {
+    bottom: -193px;
+    left: -315px;
+    animation: moveAround2 4s infinite alternate ease-in-out;
+    @include tablet {
+      bottom: -163px;
+      left: -195px;
+      width: 247px;
+    }
+    @include tablet-portrait {
+      width: 204px;
+      top: calc(100% + 249px);
+      bottom: unset;
+      left: 29px;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  &__right_1 {
+    top: 34px;
+    left: calc(100% + 80px);
+    animation: moveAround3 2s infinite alternate ease-in-out;
+    @include tablet {
+      width: 166px;
+      top: -28px;
+      left: calc(100% + 23px);
+    }
+    @include tablet-portrait {
+      width: 137px;
+      top: unset;
+      bottom: calc(100% + 7px);
+      right: 69px;
+      left: unset;
+    }
+    @include mobile {
+      width: 98px;
+      bottom: 100%;
+      right: 83px;
+    }
+  }
+  &__right_2 {
+    bottom: -275px;
+    right: -95px;
+    animation: moveAround4 5s infinite alternate ease-in-out;
+    @include tablet {
+      width: 292px;
+      bottom: -225px;
+      right: -8px;
+    }
+    @include tablet-portrait {
+      width: 241px;
+      right: -63px;
+      bottom: -168px;
+    }
+    @include mobile {
+      width: 131px;
+      right: 9px;
+      bottom: -121px;
+    }
+  }
+}
+
+@keyframes moveAround1 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(10px) translateY(10px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes moveAround2 {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateX(-20px) translateY(20px) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+}
+
+@keyframes moveAround4 {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateX(-20px) translateY(40px) rotate(10deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+}
+
+@keyframes moveAround3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

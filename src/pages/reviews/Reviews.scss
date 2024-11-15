@@ -1,0 +1,514 @@
+@import '../../assets/styles/vars.scss';
+
+.about {
+  color: $dark;
+  margin-top: 80px;
+  @include tablet {
+    margin-top: 60px;
+  }
+  @include tablet-portrait {
+    margin-top: 30px;
+  }
+  @include mobile {
+  }
+  &__text-block {
+    display: flex;
+    align-items: flex-start;
+    @include tablet-portrait {
+      justify-content: space-between;
+    }
+    @include mobile {
+    }
+  }
+  &__text {
+    width: 891px;
+    max-width: 100%;
+    margin-right: 171px;
+    @include tablet {
+      width: 659px;
+      margin-right: 27px;
+    }
+    @include tablet-portrait {
+      width: 387px;
+      margin-right: 0;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+.about-img {
+  width: 697px;
+  @include tablet {
+    width: 468px;
+  }
+  @include tablet-portrait {
+    width: 299px;
+    margin-top: 21px;
+  }
+  @include mobile {
+    width: 100%;
+    margin-top: 0;
+  }
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.about-numbers {
+  &__wrap {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    @include tablet {
+      gap: 16px;
+      margin-bottom: 25px;
+    }
+    @include tablet-portrait {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    @include mobile {
+      gap: 10px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      margin: 40px 0 21px;
+    }
+  }
+}
+
+.about-numbers-item {
+  background-image: url('../../assets/images/about/number-bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 36px 30px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  position: relative;
+  @include tablet {
+    padding: 24px 20px;
+  }
+  @include tablet-portrait {
+    padding: 28px 20px;
+  }
+  @include mobile {
+  }
+  &__title {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 57px;
+    letter-spacing: 0.005em;
+    margin-bottom: 12px;
+    @include tablet {
+      font-size: 40px;
+      line-height: 38px;
+      margin-bottom: 8px;
+    }
+    @include tablet-portrait {
+      font-size: 32px;
+      line-height: 30.4px;
+    }
+    @include mobile {
+    }
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 0.005em;
+    top: 1px;
+    right: 1px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 20.3px;
+    }
+    @include tablet-portrait {
+    }
+    @include mobile {
+    }
+  }
+  &__img {
+    position: absolute;
+  }
+  &:nth-child(1) {
+    .about-numbers-item__img {
+      top: 24px;
+      right: 29px;
+      @include tablet {
+        width: 79px;
+        top: 16px;
+        right: 19px;
+      }
+      @include tablet-portrait {
+        right: 24px;
+      }
+      @include mobile {
+        right: 21px;
+      }
+    }
+  }
+  &:nth-child(2) {
+    .about-numbers-item__img {
+      top: 9px;
+      right: 6px;
+      @include tablet {
+        width: 98px;
+        top: 6px;
+        right: 4px;
+      }
+      @include tablet-portrait {
+        right: 24px;
+      }
+      @include mobile {
+        right: 21px;
+      }
+    }
+  }
+  &:nth-child(3) {
+    .about-numbers-item__img {
+      top: 15px;
+      right: 26px;
+      @include tablet {
+        width: 90px;
+        top: 10px;
+        right: 17px;
+      }
+      @include tablet-portrait {
+        right: 37px;
+      }
+      @include mobile {
+        right: 34px;
+      }
+    }
+  }
+  &:nth-child(4) {
+    .about-numbers-item__img {
+      top: 27px;
+      right: 20px;
+      @include tablet {
+        width: 80px;
+        top: 18px;
+        right: 13px;
+      }
+      @include tablet-portrait {
+        right: 23px;
+      }
+      @include mobile {
+        right: 20px;
+      }
+    }
+  }
+}
+
+.slider {
+  --slide-spacing: 20px;
+  --slide-size: 50%;
+  margin-top: 70px;
+  position: relative;
+  @include tablet {
+    margin-top: 50px;
+    --slide-spacing: 16px;
+  }
+  @include tablet-portrait {
+    margin-top: 84px;
+  }
+  @include mobile {
+    --slide-size: 100%;
+    margin-top: 111px;
+  }
+  &__viewport {
+    overflow: hidden;
+  }
+  &__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+  }
+  &__controls {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 30px);
+    @include tablet {
+      bottom: calc(100% + 20px);
+    }
+    @include mobile {
+      bottom: calc(100% + 16px);
+      right: unset;
+      left: 0;
+    }
+  }
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 75px);
+    gap: 28px;
+    @include tablet {
+      grid-template-columns: repeat(2, 48px);
+      height: 45px;
+      gap: 24px;
+    }
+    @include tablet-portrait {
+      grid-template-columns: repeat(2, 40px);
+      gap: 16px;
+      height: 38px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      &:not([disabled]) {
+        @include hover {
+          cursor: pointer;
+          svg {
+            path:first-child {
+              fill: $dark;
+            }
+            path:not(:first-child) {
+              stroke: $white;
+            }
+          }
+        }
+      }
+
+      &[disabled] {
+        opacity: 0.4;
+      }
+
+      svg {
+        @include tablet {
+          height: 45px;
+        }
+        @include tablet-portrait {
+          height: 38px;
+        }
+      }
+    }
+  }
+}
+.slide {
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  &__wrap {
+    background-image: url('../../assets/images/reviews/review-item-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 40px;
+    @include hover {
+      cursor: pointer;
+    }
+    @include tablet {
+      padding: 25px 30px;
+    }
+    @include tablet-portrait {
+      padding: 20px 20px 17px;
+    }
+    @include mobile {
+      padding: 20px;
+    }
+  }
+  &__view-more {
+    margin: 16px 0 30px;
+    font-size: 30px;
+    line-height: 43.5px;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $orange;
+    @include hover {
+      text-decoration: none;
+    }
+    @include tablet {
+      margin: 10px 0 20px;
+      font-size: 20px;
+      line-height: 29px;
+      letter-spacing: 0.005em;
+    }
+    @include tablet-portrait {
+      font-size: 16px;
+      line-height: 23.2px;
+      margin-bottom: 16px;
+    }
+    @include mobile {
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 20.3px;
+    }
+  }
+}
+
+.slide-text {
+  font-size: 30px;
+  line-height: 43.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  @include tablet {
+    font-size: 20px;
+    line-height: 29px;
+  }
+  @include tablet-portrait {
+    font-size: 16px;
+    line-height: 23.2px;
+    letter-spacing: 0.005em;
+  }
+  p:not(:last-child) {
+    margin-bottom: 20px;
+    @include tablet {
+      margin-bottom: 16px;
+    }
+    @include mobile {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  line-height: 34.8px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  @include tablet {
+    font-size: 16px;
+    line-height: 23.2px;
+    letter-spacing: 0.005em;
+  }
+  @include tablet-portrait {
+    font-size: 14px;
+    line-height: 20.3px;
+  }
+  @include mobile {
+    font-size: 12px;
+    line-height: 17.4px;
+  }
+  img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    @include tablet {
+      width: 40px;
+      height: 40px;
+      margin-right: 16px;
+    }
+    @include tablet-portrait {
+      width: 35px;
+      height: 35px;
+    }
+    @include mobile {
+    }
+  }
+}
+
+.review-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(208, 220, 231, 0.6);
+  z-index: 999;
+  @include mobile {
+    overflow: scroll;
+  }
+}
+
+.review-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../../assets/images/reviews/modal-bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 63px 175px 63px 130px;
+  position: relative;
+  width: 1194px;
+  max-width: calc(100% - 32px);
+  @include tablet {
+    padding: 42px 104px 44px 101px;
+    width: 794px;
+  }
+  @include tablet-portrait {
+    width: 587px;
+    padding: 48px 55px 44px 61px;
+  }
+  @include mobile {
+    padding: 30px 16px 40px;
+    top: 122px;
+    transform: translate(-50%, 0);
+    margin-bottom: 150px;
+  }
+  &__author {
+    margin-top: 40px;
+    @include tablet {
+      margin-top: 25px;
+    }
+    @include tablet-portrait {
+      font-size: 14px;
+      line-height: 20.3px;
+    }
+
+    img {
+      @include tablet-portrait {
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 2px;
+    left: calc(100% + 22px);
+    display: flex;
+    @include tablet {
+      top: 32px;
+      left: calc(100% + 19px);
+    }
+    @include tablet-portrait {
+      top: unset;
+      bottom: 100%;
+      left: unset;
+      right: 0;
+    }
+    @include mobile {
+      bottom: calc(100% + 10px);
+    }
+    @include hover {
+      cursor: pointer;
+      svg {
+        path:first-child {
+          fill: #363b41;
+          stroke: #363b41;
+        }
+      }
+    }
+    svg {
+      width: 100%;
+      width: 75px;
+      @include tablet {
+        width: 48px;
+        height: 46px;
+      }
+      @include tablet-portrait {
+        width: 40px;
+        height: 38px;
+      }
+      @include mobile {
+      }
+    }
+  }
+}

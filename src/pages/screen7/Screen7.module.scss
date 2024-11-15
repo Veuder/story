@@ -1,0 +1,62 @@
+@import '../../assets/styles/vars.scss';
+
+.text {
+  p {
+    margin-bottom: 20px;
+    @include tablet {
+      margin-bottom: 16px;
+    }
+    @include tablet-portrait {
+      margin-bottom: 12px;
+    }
+    @include mobile {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @include tablet-portrait {
+    flex-direction: column;
+  }
+}
+
+.first {
+  font-family: $bonanova;
+  font-size: 68.57px;
+  line-height: 72px;
+  color: $orange;
+  position: relative;
+  top: 2px;
+  @include tablet {
+    font-size: 40px;
+    line-height: 42px;
+    top: 1px;
+  }
+  @include mobile {
+    font-size: 36px;
+    line-height: 37.8px;
+  }
+}
+
+.videoBlock {
+  position: relative;
+  video {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    @include tablet {
+      bottom: -9px;
+    }
+    @include mobile {
+      width: 1395px;
+      left: unset;
+      right: 0;
+      bottom: -38px;
+    }
+  }
+}

@@ -1,0 +1,245 @@
+@import '../../assets/styles/vars.scss';
+
+.text {
+  width: 931px;
+  @include tablet {
+    width: 595px;
+  }
+  @include tablet-portrait {
+    width: 512px;
+  }
+  @include mobile {
+    width: calc(100% + 4px);
+  }
+  @include mobile {
+    top: 120px;
+  }
+  br {
+    display: none;
+    @include mobile {
+      display: block;
+    }
+  }
+}
+.wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @include tablet-portrait {
+    flex-direction: column;
+  }
+}
+
+.first {
+  font-family: $bonanova;
+  font-size: 68.57px;
+  line-height: 72px;
+  color: $orange;
+  position: relative;
+  top: 2px;
+  @include tablet {
+    font-size: 40px;
+    line-height: 42px;
+    top: 1px;
+  }
+  @include mobile {
+    font-size: 36px;
+    line-height: 37.8px;
+  }
+}
+
+.videoBlock {
+  position: relative;
+  width: 100%;
+  @include tablet-portrait {
+    display: flex;
+    justify-content: center;
+  }
+  video {
+    width: 980px;
+    position: absolute;
+    right: 0;
+    top: 11px;
+    @include tablet {
+      width: 632px;
+    }
+    @include tablet-portrait {
+      position: relative;
+      width: 425px;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.img {
+  position: absolute;
+
+  &__left_1 {
+    top: 79px;
+    right: calc(100% + 78px);
+    animation: moveAround1 4s infinite alternate ease-in-out;
+    @include tablet {
+      width: 243px;
+      top: 35px;
+      right: calc(100% + 33px);
+    }
+    @include tablet-portrait {
+      width: 137px;
+      left: unset;
+      right: 100%;
+      bottom: unset;
+      top: -92px;
+    }
+    @include mobile {
+      width: 102px;
+      bottom: calc(100% + 29px);
+      left: 40px;
+      top: unset;
+      right: unset;
+    }
+  }
+  &__left_2 {
+    bottom: -50px;
+    right: calc(100% + 120px);
+    animation: moveAround2 4s infinite alternate ease-in-out;
+    @include tablet {
+      bottom: unset;
+      top: 207px;
+      right: calc(100% + 63px);
+      width: 200px;
+    }
+    @include tablet-portrait {
+      width: 120px;
+      top: 6px;
+      bottom: unset;
+      left: unset;
+      right: calc(100% + 16px);
+    }
+    @include mobile {
+      left: 38px;
+      top: -41px;
+      right: unset;
+      bottom: unset;
+      width: 93px;
+      animation: moveAround2-mobile 4s infinite alternate ease-in-out;
+    }
+  }
+  &__right_1 {
+    top: 277px;
+    left: calc(100% + 21px);
+    animation: moveAround3 3s infinite alternate ease-in-out;
+    @include tablet {
+      width: 264px;
+      top: 170px;
+      left: calc(100% + 19px);
+    }
+    @include tablet-portrait {
+      width: 285px;
+      top: calc(100% + 9px);
+      bottom: unset;
+      right: -71px;
+      left: unset;
+    }
+    @include mobile {
+      width: 136px;
+      top: calc(100% + 13px);
+      right: 13px;
+    }
+  }
+  &__right_2 {
+    top: calc(100% + 187px);
+    right: -65px;
+    animation: moveAround4 5s infinite alternate ease-in-out;
+    @include tablet {
+      width: 118px;
+      top: calc(100% + 127px);
+      right: -28px;
+    }
+    @include tablet-portrait {
+      width: 125px;
+      right: 181px;
+      top: calc(100% + 235px);
+    }
+    @include mobile {
+      width: 73px;
+      top: calc(100% + 124px);
+      right: 137px;
+    }
+  }
+}
+
+@keyframes moveAround1 {
+  0% {
+    transform: rotate(0);
+  }
+  // 25% {
+  //   transform: rotate(20deg);
+  // }
+  50% {
+    transform: rotate(20deg);
+  }
+  // 75% {
+  //   transform: rotate(-20deg);
+  // }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes moveAround2 {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateX(-20px) translateY(20px) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+}
+
+@keyframes moveAround2-mobile {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-10px) translateY(10px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes moveAround4 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-10px) translateY(20px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes moveAround3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.orangeBorder {
+  margin-left: 3px;
+
+  svg {
+    left: -9px;
+  }
+}

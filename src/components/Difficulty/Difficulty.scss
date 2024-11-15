@@ -1,0 +1,450 @@
+@import '../../assets/styles/vars.scss';
+.daltonizm {
+  --hover-color: red;
+}
+
+.difficulty {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28.6px;
+  @include tablet {
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+  @include mobile {
+  }
+  &__choise {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    @include tablet {
+      margin-right: 24px;
+    }
+    @include tablet-portrait {
+      display: none;
+    }
+  }
+
+  &__open-modal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    height: 72px;
+    padding: 0 33px;
+    @include tablet {
+      height: 56px;
+      padding: 0 24px 0 26px;
+    }
+    @include tablet-portrait {
+      display: none;
+    }
+    @include hover {
+      cursor: pointer;
+      svg {
+        path {
+          fill: $orange;
+        }
+      }
+    }
+    svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+}
+
+.difficulty-description {
+  margin-right: 12px;
+  position: relative;
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #373c3f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all;
+    @include hover {
+      cursor: pointer;
+      background-color: $orange;
+    }
+    @include tablet {
+      width: 24px;
+      height: 24px;
+    }
+    @include tablet-portrait {
+    }
+    @include mobile {
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0;
+    width: 390px;
+    background-image: url('../../assets/images/difficulty/description-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 16px 23px 16px 23px;
+    z-index: 1;
+    box-shadow: 0px 0px 60px 0px #00000080;
+    font-size: 22px;
+    line-height: 31.9px;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 26.1px;
+      padding-left: 17px;
+      width: 337px;
+    }
+  }
+}
+
+.difficulty-overlay {
+  background-color: rgba(54, 59, 65, 0.8);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.difficulty-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../../assets/images/difficulty/modal-bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 50px 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+  width: 1240px;
+  max-width: calc(100vw - 40px);
+  @include tablet-portrait {
+    max-width: calc(100vw - 30px);
+    width: 708px;
+    padding: 40px 36px 36px;
+  }
+  @include mobile {
+    width: 343px;
+    padding: 28px 16px 32px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 20px);
+    width: 48px;
+    height: 45px;
+    @include hover {
+      cursor: pointer;
+    }
+    @include tablet-portrait {
+      top: unset;
+      bottom: calc(100% + 12px);
+      right: 0;
+      left: unset;
+      width: 40px;
+      height: 38px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 48.3px;
+    text-align: center;
+    @include tablet-portrait {
+      font-size: 26px;
+      line-height: 27.3px;
+    }
+    @include mobile {
+      font-size: 24px;
+      line-height: 25.2px;
+    }
+  }
+
+  &__description {
+    margin: 20px 0 80px;
+    font-size: 24px;
+    line-height: 33.6px;
+    text-align: center;
+    width: 637px;
+    max-width: 100%;
+    @include tablet-portrait {
+      width: 472px;
+      font-size: 16px;
+      line-height: 22.4px;
+      margin: 12px 0 31px;
+    }
+    @include mobile {
+      font-size: 16px;
+      line-height: 22.4px;
+      margin: 8px 0 32px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.difficulty-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31.2px;
+  width: 542px;
+  height: 80px;
+  z-index: 1;
+  margin-bottom: 20px;
+
+  @include hover {
+    cursor: pointer;
+    svg {
+      path {
+        fill: $orange;
+      }
+    }
+  }
+
+  @include tablet-portrait {
+    font-size: 14px;
+    line-height: 18.2px;
+    width: 310px;
+    height: 49px;
+    margin-bottom: 16px;
+  }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 20.8px;
+    margin-bottom: 10px;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    path {
+      transition: 0.3s all;
+    }
+  }
+
+  &:last-child {
+    margin: 0 auto;
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  // display: none;
+}
+
+.menu-modal {
+  width: 100%;
+  height: 100%;
+  &.dark {
+    background-color: $dark;
+    color: $white;
+
+    .logo.white {
+      display: block;
+    }
+    .logo.dark {
+      display: none;
+    }
+    .header__link_about {
+      color: $white;
+      &::after {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA5IiBoZWlnaHQ9IjMiIHZpZXdCb3g9IjAgMCAxMDkgMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMS4xNDEyNkMxMy4wMDczIDEuMTQxMjYgMjUuMDE0NyAxLjE0MTI2IDM3LjAyMiAxLjE0MTI2QzQzLjEyNTQgMS4xNDEyNiA0OS4yMjg3IDEuMTQxMjYgNTUuMzMyIDEuMTQxMjZDNjQuODYyIDEuMTQxMjYgNzQuMzUyMyAxLjkzMTcgODMuODc5NSAxLjk5ODczQzkxLjE0OTQgMi4wNDk4NyAxMDAuNzU2IDAuNTQxMzg2IDEwOCAxLjE0MTM2IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K);
+      }
+    }
+  }
+  &.white {
+    background-color: #f5f5f5;
+    .logo.white {
+      display: none;
+    }
+    .logo.dark {
+      display: block;
+    }
+  }
+  .container {
+    height: 100%;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__header {
+    padding-top: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__content {
+    flex: 1 0 auto;
+    margin-top: 77px;
+  }
+  &__footer {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+}
+
+.modal-content-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .difficulty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    @include mobile {
+      width: 100%;
+    }
+  }
+  .difficulty__choise {
+    display: flex;
+    margin: 0;
+    position: relative;
+    @include mobile {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  .difficulty__open-modal {
+    display: flex;
+    color: $dark;
+    width: 290px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-top: 24px;
+    path {
+      fill: white;
+    }
+  }
+
+  .difficulty-description {
+    position: static;
+  }
+
+  .difficulty-description__content {
+    top: calc(100% + 144px);
+    left: 50%;
+    transform: translateX(-50%);
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}
+
+.modal-content-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  @include mobile {
+    justify-content: flex-start;
+    height: auto;
+    position: relative;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__btn {
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    height: 66px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    margin-top: 24px;
+    svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__img-1 {
+    margin-bottom: 32px;
+    width: 334px;
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__img-2 {
+    display: none;
+    @include mobile {
+      display: block;
+      width: 175px;
+      position: absolute;
+      top: 100%;
+      left: -16px;
+    }
+  }
+}

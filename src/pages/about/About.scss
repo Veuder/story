@@ -1,0 +1,62 @@
+@import '../../assets/styles/vars.scss';
+
+.reviews {
+  color: $dark;
+  margin-top: 80px;
+  position: relative;
+  @include tablet {
+    margin-top: 60px;
+  }
+  @include tablet-portrait {
+    margin-top: 30px;
+  }
+  @include mobile {
+  }
+  &__text-block {
+    display: flex;
+    align-items: flex-start;
+    @include mobile {
+      position: relative;
+    }
+  }
+  &__text {
+    width: 823px;
+    max-width: 100%;
+    margin-right: 47px;
+    @include tablet {
+      width: 558px;
+      margin-right: 34px;
+    }
+    @include tablet-portrait {
+      width: 387px;
+      margin-right: 9px;
+    }
+    @include mobile {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+.reviews-img {
+  width: 363px;
+  margin-top: -76px;
+  @include tablet {
+    width: 194px;
+    margin-top: -25px;
+  }
+  @include tablet-portrait {
+    width: 167px;
+    margin-top: -28px;
+  }
+  @include mobile {
+    position: absolute;
+    width: 134px;
+    top: -58px;
+    left: 151px;
+    margin-top: 0;
+  }
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

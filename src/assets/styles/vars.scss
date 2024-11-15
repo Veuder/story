@@ -1,0 +1,52 @@
+// media
+$laptop: 1920px;
+$tablet: 1919px;
+$tabletPortrait: 1279px;
+$mobile: 767px;
+
+// FONTS
+$manrope: 'Manrope', sans-serif;
+$inter: 'Inter', sans-serif;
+$bonanova: 'BonaNova', sans-serif;
+
+// colors
+$black: #000000;
+$dark: #212429;
+$orange: #e95929;
+$white: #ffffff;
+$orange-d: #b5830e;
+
+// mixins
+@mixin hover() {
+  transition: 0.3s all;
+  &:hover {
+    @media (min-width: 1025px) {
+      transition: 0.3s all;
+      @content;
+    }
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (max-width: $tabletPortrait) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
